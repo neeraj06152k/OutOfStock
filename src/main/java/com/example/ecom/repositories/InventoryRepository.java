@@ -1,5 +1,12 @@
 package com.example.ecom.repositories;
 
-public interface InventoryRepository {
+import com.example.ecom.models.Inventory;
+import com.example.ecom.models.Product;
+import com.example.ecom.models.User;
 
+import java.util.Optional;
+
+public interface InventoryRepository extends MyRepository<Inventory>{
+
+    Optional<Inventory> findByProduct(Product product);
 }

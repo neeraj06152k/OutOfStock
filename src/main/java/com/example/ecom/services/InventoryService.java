@@ -5,5 +5,6 @@ import com.example.ecom.models.Inventory;
 
 public interface InventoryService {
 
-    public Inventory updateInventory(int productId, int quantity) throws ProductNotFoundException;
+    Inventory updateInventory(int productId, int quantity) throws ProductNotFoundException;
+    void sendNotification(int productId);
 }
